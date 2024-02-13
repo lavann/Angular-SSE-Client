@@ -21,28 +21,16 @@ Usage
 The SseService is used to establish a connection with a server using Server-Sent Events (SSE). It creates an EventSource with the provided URL, listens for messages from the server, and sends those messages to the observer. It also handles errors and ensures that the EventSource is closed when the observer is unsubscribed.
 
 Here's an example of how to use the service:
+## Code
 
-import { Component, OnInit } from '@angular/core';
-import { SseService } from './sse.service';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent implements OnInit {
-  public sseResponse: string = '';
-
-  constructor(private _sseService: SseService) { }
-
-  ngOnInit(): void {
-    const url: string = 'http://localhost:5000/openai';
-    
-    this._sseService.getServerEvents(url).subscribe((event) => {
-      this.sseResponse += event.data;
-    });
-  }
-}
+```js
+    // Subscribing to the SSE service
+    this.sseSubscription = this._sseService.getServerEvents(url).subscribe((event) => {
+      this.sseResponse += event.data; // append the data to the sseResponse string
+      console.log(this.sseResponse)
+    } );
+   
+```
 
 In this example, the AppComponent subscribes to the server events and appends the incoming data to the sseResponse string.
 Contributing
