@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height */
+  }
+  
+  .top-nav {
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .top-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1; /* Take up the remaining space */
+  }
+  
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align items vertically */
+    padding: 20px;
+    width: 200px; /* Set a width for the sidebar */
+    background-color: #f8f8f8;
+  }
+  
+  .side-bar a {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  
+  .main-content {
+    flex-grow: 1; /* Make the main content take up the remaining space */
+    padding: 20px;
+    overflow-y: auto; /* Add a scrollbar if necessary */
+  }
