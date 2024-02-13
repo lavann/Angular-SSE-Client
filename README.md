@@ -9,7 +9,7 @@ Installation
 
 First, clone the repository to your local machine:
 
-git clone https://github.com/yourusername/yourrepository.git
+git clone https://github.com/lavann/Angular-SSE-Client
 
 Then, navigate to the project directory and install the dependencies:
 
